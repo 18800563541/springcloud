@@ -1,0 +1,16 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: springcloud-config-server
+    #连接远程仓库
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/18800563541/springcloud-config.git  #https,不是git
+
+#访问：http://localhost:3344/application-test.yml
+#  http://localhost:3344/application/test/master
+#  http://localhost:3344/master/application-dev.yml
+#通过config-server可以连接到git，访问启动的资源以及配置~
